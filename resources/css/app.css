@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Light theme colors */
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #121212;
+  --card-bg: #f9f9f9;
+  --link-color: #1d4ed8;
+  --border-color: #e5e7eb;
+  --btn-primary-bg: #2563eb;
+  --btn-primary-color: #fff;
+  --btn-danger-bg: transparent;
+  --btn-danger-color: #dc2626;
+}
+
+/* Dark theme colors */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1f2937;
+  --link-color: #60a5fa;
+  --border-color: #374151;
+  --btn-primary-bg: #3b82f6;
+  --btn-primary-color: #fff;
+  --btn-danger-bg: transparent;
+  --btn-danger-color: #ef4444;
+}
+
+/* Use variables for page styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a, a:hover, a:focus {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-danger {
+  background-color: var(--btn-danger-bg);
+  color: var(--btn-danger-color);
+  border: 1px solid var(--btn-danger-color);
+}
+
+.btn-danger:hover {
+  background-color: var(--btn-danger-color);
+  color: #fff;
+}
+
