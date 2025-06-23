@@ -1,84 +1,135 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    </a>
 </p>
 
 <h1 align="center">QuoteStack 📚</h1>
-
-<p align="center">
-  A personal quote collector web app built using Laravel where users can save, tag, search, and manage quotes. Features include user profiles, quote of the day, and secure authentication.
-</p>
+<p align="center">A personal quote management app built with Laravel</p>
 
 ---
 
-## 🔥 Features
+## ✨ Features
 
-- ✅ Register/Login with authentication
-- ✍️ Add/Edit/Delete your own quotes
-- 🏷️ Add built-in and custom tags to quotes
-- 🔍 Search quotes by content, author, or tag
-- 🌟 Quote of the Day (random daily quote)
-- 👤 User profile with bio, username, profile picture
-- 🔒 Change password and delete account
-- 🎨 Dark theme layout with responsive UI
+### 📌 Quote Management
+- Add/Edit/Delete quotes
+- Tag quotes with multiple tags
+- Favorite quotes functionality
+- “Quote of the Day” display (random daily quote)
+
+### 🔍 Search & Filter
+- Search quotes by author, content, or tag
+- Filter quotes based on user-specific data
+
+### 👤 User Profiles
+- Secure user authentication (login/register)
+- Profile edit with bio, username, and profile picture
+- Password update and account deletion options
+
+### 🧰 Admin & Dashboard
+- View all quotes you've added
+- Interactive UI with Bootstrap 5 styling
+- Responsive across devices
 
 ---
 
-## 🖥️ Demo
+## 🛠️ Technology Stack
 
-> Coming Soon — (You can deploy on [Render](https://render.com), [Vercel](https://vercel.com), or your own server)
+- **Backend**: Laravel 10+
+- **Frontend**: Blade + Bootstrap 5
+- **Database**: MySQL (via XAMPP)
+- **Authentication**: Laravel Custom Auth (no Breeze/Jetstream)
+- **File Storage**: Laravel Storage (public disk)
 
-```bash
-# Step 1: Clone the repository
-git clone https://github.com/mustakintopu/QuoteStack.git
-cd QuoteStack
+---
 
-# Step 2: Install dependencies
-composer install
+## 📋 Requirements
 
-# Step 3: Copy .env file and set your database config
-cp .env.example .env
+- PHP >= 8.1
+- Composer
+- MySQL (via XAMPP or other)
+- Node.js & NPM (for frontend assets if needed)
 
-# Step 4: Generate application key
-php artisan key:generate
+---
 
-# Step 5: Set database info in `.env` then run migrations
-php artisan migrate
+## 🚀 Installation
 
-# Step 6: Start the development server
-php artisan serve
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mustakintopu/QuoteStack.git
+   cd QuoteStack
+2. Install PHP dependencies
+     ```bash
+    composer install
+3. Set up environment file
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
 
-🛠️ Tech Stack
-Laravel 10 (PHP Framework)
+4. Configure your .env for MySQL
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=quotestack
+    DB_USERNAME=root
+    DB_PASSWORD=
+5. Run migrations
+    ```bash
 
-Blade Templating Engine
+    php artisan migrate
+6. Serve the application
 
-Bootstrap 5 (for UI)
+    ```bash
+    php artisan serve
 
-MySQL (or any Laravel-supported DB)
+7. Visit http://localhost:8000
 
-Font Awesome Icons
+📖 Usage
+1. Register a new user account.
+2. Add quotes and tag them as needed.
+3. Edit your profile with bio and image.
+4. Search/filter quotes.
+5. View your “Quote of the Day.”
 
-📁 Project Structure
-Folder	Description
-app/Http/Controllers/	Contains controller logic like QuoteController & ProfileController
-resources/views/	Blade templates for UI
-routes/web.php	Web routes for the app
-app/Models/Quote.php	Quote model using Eloquent
-public/	Publicly accessible files (images, assets)
+🗂️ Project Structure
+    QuoteStack/
+    ├── app/
+    │   ├── Http/Controllers/
+    │   └── Models/
+    ├── database/
+    │   ├── migrations/
+    │   └── seeders/
+    ├── resources/
+    │   ├── views/
+    │   ├── css/
+    │   └── js/
+    └── routes/
+        └── web.php
+
+🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Steps:
+
+1. Fork the repo
+2. Create a new branch (git checkout -b feature/yourFeature)
+3. Commit your changes (git commit -m 'Add some feature')
+4. Push to the branch (git push origin feature/yourFeature)
+5. Open a Pull Request
 
 📄 License
-This project is licensed under the MIT License.
-Feel free to use, improve, or contribute!
+This project is open-sourced software licensed under the MIT license.
 
-🙋‍♂️ Author
-Mustakin Rahman
-🔗 GitHub: @mustakintopu
+🙏 Acknowledgements
+-Laravel Team
+-Bootstrap Icons
+-Font Awesome
+-Open-source community
 
-🙌 Acknowledgements
-Laravel for the amazing framework
+📞 Contact
+Email: mustakinrahman598@gmail.com
 
-FontAwesome for icons
+GitHub: https://github.com/mustakintopu
 
-Bootstrap for styling
-
-
+✨ QuoteStack – Organize and reflect on your favorite quotes in one place!
